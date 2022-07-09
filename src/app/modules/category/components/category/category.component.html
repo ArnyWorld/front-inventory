@@ -49,7 +49,7 @@
                     <mat-icon aria-label="Edit">edit</mat-icon>
                 </button>
                 <button mat-icon-button color="accent">
-                    <mat-icon aria-label="Delete">delete</mat-icon>
+                    <mat-icon aria-label="Delete" (click)="delete(element.id)">delete</mat-icon>
                 </button>
             </td>
         </ng-container>    
