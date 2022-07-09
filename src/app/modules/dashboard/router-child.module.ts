@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategoryComponent } from '../category/components/category/category.component';
 import { HomeComponent } from './components/home/home.component';
 
 export const childRoutes: Routes = [
@@ -10,7 +11,11 @@ export const childRoutes: Routes = [
     {
         path: 'home',
         component:HomeComponent
-    }
+    },
+    {
+        path: 'category',
+        component:CategoryComponent
+    },
 
 ]
 
