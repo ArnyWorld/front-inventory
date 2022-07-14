@@ -103,10 +103,17 @@ export class ProductComponent implements OnInit {
       }
     });
   }
-  
+
+  buscar(name: string){
+    if(name.length=== 0){
+      return this.getProducts();
+    }
+    this._productService.getProductByName(name)
+    .subscribe((resp:any)=>{
+      this.processProductResponse(resp);
+    })
+  } 
 }
-
-
 export interface ProductElement{
   id:number;
   name:string;
