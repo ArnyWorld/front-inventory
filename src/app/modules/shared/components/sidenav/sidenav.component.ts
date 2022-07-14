@@ -22,7 +22,7 @@ export class SidenavComponent implements OnInit {
     },
     {
       name:"Products",
-      route:"home",
+      route:"product",
       icon:"production_quantity_limits"
     }
   ]

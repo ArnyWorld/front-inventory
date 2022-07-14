@@ -1,0 +1,20 @@
+table{
+    width: 100%;
+}
+
+.alinear{
+    margin-top: 20px;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+
+mat-form-field{
+    width: 140%;
+}
+
+.mat-cell:nth-child(1),
+mat-header-cell:nth-child(1){
+    flex: 0 0 6%;
+}
