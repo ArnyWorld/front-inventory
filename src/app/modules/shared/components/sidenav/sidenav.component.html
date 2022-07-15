@@ -18,7 +18,7 @@
                         <mat-icon>person_outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="logout()">
                             <mat-icon>exit_to_app</mat-icon>
                             Cerrar sesión
                         </button>
@@ -36,8 +36,8 @@
                 <!-- profile -->
                 <div class="profile-card">
                     <div class="header">
-                        <h2>Arni Mñz</h2>
-                        <h4>arni@gmail.com</h4>
+                        <h2>{{username}}</h2>
+                        
                     </div>
                 </div>
                 <mat-divider></mat-divider>
