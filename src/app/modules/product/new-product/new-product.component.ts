@@ -62,7 +62,7 @@ export class NewProductComponent implements OnInit {
     uploadImageData.append('categoryId', data.category); 
     
 
-    if(data !=null){
+    if(this.data !=null){
     //Update the product
       this.productService.updateProduct(uploadImageData, this.data.id)
       .subscribe((data:any)=>{
