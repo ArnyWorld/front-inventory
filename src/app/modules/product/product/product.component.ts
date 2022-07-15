@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ConfirmComponent } from '../../shared/components/confirm/confirm.component';
 import { ProductService } from '../../shared/services/product.service';
 import { NewProductComponent } from '../new-product/new-product.component';
+import { UtilService } from 'src/app/modules/shared/services/util.service';
 
 @Component({
   selector: 'app-product',
@@ -14,10 +15,12 @@ import { NewProductComponent } from '../new-product/new-product.component';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private _productService:ProductService, public dialog:MatDialog, private snackBar:MatSnackBar) { }
+  constructor(private _productService:ProductService, public dialog:MatDialog, private utilService:UtilService,private snackBar:MatSnackBar) { }
+  isAdmin:any;
 
   ngOnInit(): void {
     this.getProducts();
+    this.isAdmin = this.utilService.isAdmin();
   }
 
   displayedColumns:string[]=['id','name','price','account','category','picture','actions'];
